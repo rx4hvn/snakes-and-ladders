@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Snakes and Ladders game</title>
+<meta property="og:locale" content="en_US" /><meta property="og:type" content="HTML5 Game" /><meta property="og:title" content="Snakes and Ladders Game" /><meta property="og:description" content="This is Snakes and Ladders jump game made in HTML5." /><meta property="og:url" content="http://digitopper.com/" /><meta property="og:site_name" content="Snakes and Ladders jump Game" /><meta property="author" content="DigiTopper" />
+        
+<meta name="viewport" content="width=800, user-scalable=yes, initial-scale=1, maximum-scale=1" />
+
+<link rel="stylesheet" type="text/css" href="css/sl.css" />
+</head>
+
+<body>
+
+<div id="debug">
+	<label>
+		<select onchange="setfixroll(this.value)">
+			<option value="">Random roll</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+		</select>
+	</label>
+	
+	<span id="loganswer">Debug message appeares here</span>
+</div>
+<div id="wrapper">
+	<div id="container">
+    	<div id="screen1">
+        	<header>
+            	<div class="snakes-1"></div>
+    			<div id="logo"><h1>Snakes <span>and</span> Ladders</h1></div>
+            </header>
+            <div class="clear"></div>
+            <footer>
+                <div class="screen1_footer">
+                        <div id="start" onclick="nextscreen('screen1', 'screen2');" class="startBtn"><span>Start</span> </div>
+                        <div class="bottom-grass">
+                            <div class="grass-1"></div>
+                            <div class="grass-2"></div>
+                        </div> 
+                </div>
+            </footer>
+    	</div><!-- \screen1 -->
+    	
+      <div id="screen2" style="display:none">
+      		<div class="screen2-ladder"></div>
+    		<div id="instructions">
+                <h2>Instructions</h2>
+                <div class="inst_text">
+                    <ul>
+                        <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                        <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                        <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="clear"></div>
+                	<div class="snakes-2"></div>
+            <footer>
+                <div class="screen2_footer">
+                        <div id="play" class="startBtn" onclick="nextscreen('screen2', 'screen3');"><span>Play</span> </div>
+                        <div class="bottom-grass">
+                            <div class="grass-1"></div>
+                            <div class="grass-2"></div>
+                        </div> 
+                </div>
+            </footer>
+    	
+        </div><!-- \screen2 -->
+        
+        <div id="screen3" style="display:none">
+        	<div class="Level-Theme">
+                <h3>Choose the Appropriate Level</h3>
+            	<ul id="selectLevel">
+                	<li>Level 1</li>
+                	<li>Level 2</li>
+                	<li>Level 3</li>
+                	<li>Level 4</li>
+                	<li>Level 5</li>
+                </ul>
+            </div>
+        	
+        </div><!-- \screen3 -->
+        
+        <div id="screen4" style="display:none">
+        	<div class="Level-Theme">
+                <h3>Choose your Theme for the game</h3>
+            	<ul id="selectTheme">
+                	<li>Animals</li>
+                	<li>Plants </li>
+                	<li>Water</li>
+                	<li>Safety</li>
+                	<li> Food</li>
+                </ul>
+            </div>
+        	
+        </div><!-- \screen4 -->
+        
+        <div id="screen5" style="display:none">
+        	<div id="dice">
+            	<div class="surface" id="rolldicebtn"><span>ROLL</span></div>
+                <div class="dice" id="reddice"></div>
+            </div>
+        	<div id="table_grid">
+            	<table class="table">
+                  <tbody>
+                    <tr class="">
+                      <td>Stop</td>
+                      <td>99</td>
+                      <td>98</td>
+                      <td>97</td>
+                      <td>96</td>
+                      <td>95</td>
+                      <td>94</td>
+                      <td>93</td>
+                      <td>92</td>
+                      <td>91</td>
+                    </tr>
+                    <tr class="">
+                      <td>81</td>
+                      <td>82</td>
+                      <td>83</td>
+                      <td>84</td>
+                      <td>85</td>
+                      <td>86</td>
+                      <td>87</td>
+                      <td>88</td>
+                      <td>89</td>
+                      <td>90</td>
+                    </tr>
+                    <tr class="">
+                     <td>80</td>
+                      <td>79</td>
+                      <td>78</td>
+                      <td>77</td>
+                      <td>76</td>
+                      <td>75</td>
+                      <td>74</td>
+                      <td>73</td>
+                      <td>72</td>
+                      <td>71</td>
+                    </tr>
+                    <tr class="">
+                      <td>61</td>
+                      <td>62</td>
+                      <td>63</td>
+                      <td>64</td>
+                      <td>65</td>
+                      <td>66</td>
+                      <td>67</td>
+                      <td>68</td>
+                      <td>69</td>
+                      <td>70</td>
+                    </tr>
+                    <tr class="">
+                      <td>60</td>
+                      <td>59</td>
+                      <td>58</td>
+                      <td>57</td>
+                      <td>56</td>
+                      <td>55</td>
+                      <td>54</td>
+                      <td>53</td>
+                      <td>52</td>
+                      <td>51</td>
+                    </tr>
+                    <tr class="">
+                     <td>41</td>
+                      <td>42</td>
+                      <td>43</td>
+                      <td>44</td>
+                      <td>45</td>
+                      <td>46</td>
+                      <td>47</td>
+                      <td>48</td>
+                      <td>49</td>
+                      <td>50</td>
+                    </tr>
+                    <tr class="">
+                     <td>40</td>
+                      <td>39</td>
+                      <td>38</td>
+                      <td>37</td>
+                      <td>36</td>
+                      <td>35</td>
+                      <td>34</td>
+                      <td>33</td>
+                      <td>32</td>
+                      <td>31</td>
+                    </tr>
+                    <tr class="">
+                      <td>21</td>
+                      <td>22</td>
+                      <td>23</td>
+                      <td>24</td>
+                      <td>25</td>
+                      <td>26</td>
+                      <td>27</td>
+                      <td>28</td>
+                      <td>29</td>
+                      <td>30</td>
+                    </tr>
+                    <tr class="">
+                      <td>20</td>
+                      <td>19</td>
+                      <td>18</td>
+                      <td>17</td>
+                      <td>16</td>
+                      <td>15</td>
+                      <td>14</td>
+                      <td>13</td>
+                      <td>12</td>
+                      <td>11</td>
+                    </tr>
+                    <tr class="">
+                     <td>Start</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>10</td>
+                    </tr>
+                  </tbody>
+    			</table>
+            	<div id="ludo">
+            	<div id="snakesDiv">
+                	<div id="ludoSnake1"></div>
+                	<div id="ludoSnake2"></div>
+                	<div id="ludoSnake3"></div>
+                	<div id="ludoSnake4"></div>
+                	<div id="ludoSnake5"></div>
+                	<div id="ludoSnake6"></div>
+                	<div id="ludoSnake7"></div>
+                	<div id="ludoSnake8"></div>
+                	<div id="ludoSnake9"></div>
+                	<div id="ludoSnake10"></div>
+                	<div id="ludoSnake11"></div>
+                	<div id="ludoSnake12"></div>
+                	<div id="ludoSnake13"></div>
+                	<div id="ludoSnake14"></div>
+                	<div id="ludoSnake15"></div>
+                	<div id="ludoSnake16"></div>
+                </div>
+                <div id="laddersDiv">
+                	<div id="ladder1"></div>
+                	<div id="ladder2"></div>
+                	<div id="ladder3"></div>
+                	<div id="ladder4"></div>
+                	<div id="ladder5"></div>
+                	<div id="ladder6"></div>
+                	<div id="ladder7"></div>
+                	<div id="ladder8"></div>
+                	<div id="ladder9"></div>
+                	<div id="ladder10"></div>
+                	<div id="ladder11"></div>
+                	<div id="ladder12"></div>
+                	<div id="ladder13"></div>
+                	<div id="ladder14"></div>
+                	<div id="ladder15"></div>
+                	<div id="ladder16"></div>                	
+                </div>
+				
+				<div id="player"></div>
+            	
+            </div>
+            </div><!-- \grid -->
+            <div id="replay" onclick="playagain()">Replay</div>
+            
+            
+            <div id="questionViewer">
+                <div id="questionTitle" class=""> 
+                    <p id="questionTitleTxt">Lorem Ipsum is simply dummy text of the printing and type setting industry Lorem Ipsum is simply dummy  text of the printing and typesetting industry??<!-- Questions type here --> </p> 
+                </div>
+                <div id="userAnswer">
+                    <ul>
+                        <li onclick="setactiveans(this)">Answer 1</li>
+                        <li onclick="setactiveans(this)">Answer 2</li>
+                        <li onclick="setactiveans(this)">Answer 3</li>
+                        <li onclick="setactiveans(this)">Answer 4</li>
+                    </ul>
+                </div>
+                <div><button id="submitAns" onclick="submitAnswer()">Submit</button></div>
+         </div>
+        	
+        </div><!-- \screen5 -->
+        
+        <div id="msgComplete">
+    	<p>
+        	<span><img src="img/wellDone/1.png" alt="" /></span>
+        	<span><img src="img/wellDone/2.png" alt="" /></span>
+        	<span><img src="img/wellDone/3.png" alt="" /></span>
+        	<span><img src="img/wellDone/4.png" alt="" /></span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        	<span><img src="img/wellDone/5.png" alt="" /></span>
+        	<span><img src="img/wellDone/6.png" alt="" /></span>
+        	<span><img src="img/wellDone/7.png" alt="" /></span>
+        	<span><img src="img/wellDone/8.png" alt="" /></span>
+        	<span><img src="img/wellDone/9.png" alt="" /></span>
+        </p>
+    </div>
+    
+    <div class="overlay">
+    	<div class="alertMsg errorMsg"><p>Please select an answer.</p></div>
+    	<div class="alertMsg sixDigitMsg"><p>You have thrown a six on the dice. Please roll again.</p></div>
+    </div>
+    
+    </div><!-- \container -->
+</div><!-- \wrapper -->
+
+
+<audio id="correctsound" name="correctsound">
+	<source src="audio/correct.ogg" type="audio/ogg">
+	<source src="audio/correct.mp3" type="audio/mpeg">
+	<source src="audio/correct.wav" type="audio/wav">
+</audio>
+<audio id="incorrectsound" name="incorrectsound">
+	<source src="audio/incorrect.ogg" type="audio/ogg">
+	<source src="audio/incorrect.mp3" type="audio/mpeg">
+	<source src="audio/incorrect.wav" type="audio/wav">
+</audio>
+
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/taffy-min.js"></script>
+<script type="text/javascript" src="js/sl.config.js"></script>
+<script type="text/javascript" src="js/sl.js"></script>
+
+</body>
+</html>
