@@ -293,3 +293,51 @@ var clearfixroll = function()
 {
 	window.toroll = "";
 }
+
+var preload = ["img/digit1.png",
+    "img/digit2.png",
+    "img/digit3.png",
+    "img/digit4.png",
+    "img/digit5.png",
+    "img/digit6.png",
+    "img/grass.png",
+    "img/snake1.png",
+    "img/snake2.png",
+    "img/snakes/ludoSnake1.png",
+    "img/snakes/ludoSnake2.png",
+    "img/snakes/ludoSnake3.png",
+    "img/snakes/ludoSnake4.png",
+    "img/snakes/ludoSnake5.png",
+    "img/snakes/ludoSnake6.png",
+    "img/snakes/ludoSnake7.png",
+    "img/snakes/ludoSnake8.png",
+    "img/snakes/ludoSnake8.png",
+    "img/snakes/ludoSnake9.png",
+    "img/snakes/ludoSnake10.png",
+    "img/snakes/ludoSnake11.png",
+    "img/snakes/ludoSnake12.png",
+    "img/snakes/ludoSnake13.png",
+    "img/snakes/ludoSnake14.png",
+    "img/snakes/ludoSnake15.png",
+    "img/snakes/ludoSnake16.png"];
+	
+var promises = [];
+for (var i = 0; i < preload.length; i++) {
+    (function(url, promise) {
+        var img = new Image();
+        img.onload = function() {
+          promise.resolve();
+        };
+        img.src = url;
+    })(preload[i], promises[i] = $.Deferred());
+}
+
+$(document).ready(function() {
+
+	$.when.apply($, promises).done(function() {
+		$('body').addClass('done');
+	});
+
+
+
+});

@@ -29,12 +29,17 @@
 	outline:none;
 	padding:0px;
 }
+html, body {
+	height: 100%;
+}
 body {
 	margin: 0;
 	padding: 0;
 }
 #wrapper{
 	width:100%;
+	height:100%;
+	display: flex;
 	margin: 0 auto;
 }
 .clear{ clear:both;}
@@ -1354,4 +1359,32 @@ span#loganswer {
     color: #FFF;
     -moz-box-sizing: border-box;    -webkit-box-sizing: border-box;    box-sizing: border-box;    font: 18px "arial";    padding: 14px 12px 13px 12px;    margin: 5px;    -webkit-border-radius: 3px;    -moz-border-radius: 3px;    border-radius: 3px;    -webkit-box-shadow: 2px 2px 7px #000;    -moz-box-shadow: 2px 2px 7px #000;    box-shadow: 2px 2px 7px #000;    
     background: #515151;        border: none;    outline: none;    display: inline-block;    -webkit-appearance: none;    -moz-appearance: none;    appearance: none;    cursor: pointer;    min-width: 200px;    margin: 20px auto;
+}
+
+
+body.spinnerprogress .progress {
+	background: #dbeef4;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	text-align: center;
+}
+
+body.spinnerprogress.done .progress {
+	display: none;
+}
+
+#progress-wrapper {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	text-align: -webkit-center;
+	margin: auto;
+}
+
+.mauto {
+	margin:  auto;
 }
