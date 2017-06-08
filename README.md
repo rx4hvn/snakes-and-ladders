@@ -5,6 +5,8 @@ Author: [Ashok Shah](https://www.shahnashok.com)
 
 [DEMO](https://rx4hvn.github.io/snakes-and-ladders/)
 
+[DEMO OPTIONS](https://rx4hvn.github.io/snakes-and-ladders/#debug)
+
 ## Browser Support
 - IE 10+
 - Chrome
